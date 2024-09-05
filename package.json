@@ -1,0 +1,11 @@
+{
+  "name": "casestudy_1",
+  "version": "1.0.0",
+  "description": "Develop a Customer Onboarding System for a telecom company to streamline the process of registering new customers,verifying their documents and activating their services.\r ## About Our Team\r This project had been developed as a part of our technical bootcamp.Our team consist of:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

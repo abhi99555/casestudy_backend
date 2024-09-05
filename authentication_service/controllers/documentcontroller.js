@@ -26,10 +26,11 @@ const upload = multer({ storage });
 // Function to save document details to the database
 const saveDocument = async (filePath, customerId) => {
     try {
+        console.log(customerId);
         const document = await prisma.document.create({
             data: {
                 filePath: filePath,
-                customerId: 14,
+                customerId: parseInt(customerId),
                 verificationStatus: 'Pending' // Assuming 'Pending' is the initial status
             }
         });
@@ -44,7 +45,7 @@ const saveDocument = async (filePath, customerId) => {
 router.post('/upload', upload.single('document'), async (req, res) => {
     try {
         const customerId = req.query.customerId;
-
+        console.log(customerId);
         if (!req.file) {
             console.error('No file uploaded');
             return res.status(400).json({ message: 'No file uploaded' });
